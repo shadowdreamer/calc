@@ -1,0 +1,54 @@
+*{font-size: 40px;  
+}
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    flex-flow: column;
+    display: flex;
+    
+}
+#input{
+  background-color: pink;
+  display:block;
+  word-break: break-all;
+  word-wrap: break-word;
+  flex:auto;
+ }
+
+#pad{
+  position:fixed;
+  bottom:0;  
+  background-color: gray;
+  width: 100%;
+  color: blueviolet;  
+}
+#shizi{
+  margin-bottom: 0;
+  margin-top: 2%;
+  line-height: 1em;
+  
+}
+#jieguo{
+  margin-bottom: 0;
+  margin-top: 2%;
+  
+}
+.padline{
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 2%;
+  
+}
+.button{
+  font-size: xx-large;
+  text-align: center; 
+  width: 25%;
+  margin: 0.5%;  
+  border-color: pink;
+  border-style: solid;   
+  background-color: silver;
+}
+.button:hover{
+  background-color: plum;
+}
