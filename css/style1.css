@@ -9,6 +9,7 @@ html, body {
     
 }
 #input{
+  font-size: 600%;
   background-color: pink;
   display:block;
   word-break: break-all;
