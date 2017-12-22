@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" /> 
-<title>科学计算器</title>
+<title>不科学计算器</title>
 <link rel="stylesheet" type= "text/css" href="css/style1.css"/>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/CalcEval.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/CalcEval.js"></script>
 <script src="js/main.js"></script>                  
 </head>              
   	<body>
@@ -15,30 +15,31 @@
                         <p id= "jieguo"></p></p>         </div>
                 <div id="pad">
                         <p class= "padline">
-                                <span  class = "button" id="allclear">AC</span>
-                                <span  class = "button" id="ans">ANS</span>
-                                <span  class = "button" id="chen">×</span>
-                                <span  class = "button" id="chu">÷</span></p>
+                                <button  class = "button" onclick = "inputwrite('AC')">AC</button>
+                                <button  class = "button" onclick = "inputwrite('ANS')">ANS</button>
+                                <button  class = "button" onclick = "inputwrite('chen')">×</button>
+                                <button  class = "button" onclick = "inputwrite('chu')">÷</button></p>
                         <p class= "padline">
-                                <span  class = "button" id="num7">7</span>
-                                <span  class = "button" id="num8">8</span>
-                                <span  class = "button" id="num9">9</span>
-                                <span  class = "button" id="jia">+</span></p>
+                                <button  class = "button" onclick = "inputwrite(7)">7</button>
+                                <button  class = "button" onclick = "inputwrite(8)">8</button>
+                                <button  class = "button" onclick = "inputwrite(9)">9</button>
+                                <button  class = "button" onclick = "inputwrite('jia')">+</button></p>
                         <p class= "padline">
-                                <span  class = "button" id="num4">4</span>
-                                <span  class = "button" id="num5">5</span>
-                                <span  class = "button" id="num6">6</span>
-                                <span  class = "button" id="jian">-</span></p>
+                                <button  class = "button" onclick = "inputwrite(4)">4</button>
+                                <button  class = "button" onclick = "inputwrite(5)">5</button>
+                                <button  class = "button" onclick = "inputwrite(6)">6</button>
+                                <button  class = "button" onclick = "inputwrite('jian')">-</button></p>
                         <p class = "padline">
-                                <span  class = "button" id="num1">1</span>
-                                <span  class = "button" id="num2">2</span>
-                                <span  class = "button" id="num3">3</span>
-                                <span  class = "button" id="zhenfu">+/-</span></p>
+                                <button  class = "button" onclick = "inputwrite(1)">1</button>
+                                <button  class = "button" onclick = "inputwrite(2)">2</button>
+                                <button  class = "button" onclick = "inputwrite(3)">3</button>
+                                <button  class = "button" onclick = "inputwrite('zhenfu')">+/-</button></p>
                         <p class = "padline">
-                                <span  class = "button" id="kuohao">()</span>                        
-                                <span  class = "button" id="num0">0</span>
-                                <span  class = "button" id="dot">.</span>
-                                <span  class = "button" id="dengyu">=</span></p>
+                                <button  class = "button" onclick = "inputwrite('zuokuohao')">(</button> 
+								<button  class = "button" onclick = "inputwrite('youkuohao')">)</button>
+                                <button  class = "button" onclick = "inputwrite(0)">0</button>
+                                <button  class = "button" onclick = "inputwrite('dot')">.</button>
+                                <button  class = "button" onclick = "inputwrite('dengyu')">=</button></p>
                 </div>
 	</body>
 </html>
