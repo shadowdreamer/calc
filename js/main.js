@@ -1,4 +1,5 @@
 var ANS;
+var ce = new CalcEval();//CalcEval引擎是一个专门解决javascript浮点数误差的的引擎，能够完美的解决各种复合的运算，最终输出正确的结果。创建引擎对象
 $(document).ready(function(){
 	$("#num1").click(function(){
 		$("#shizi span:last").text($("#shizi span:last").text()+1)   /*数字0~9*/
@@ -32,15 +33,7 @@ $(document).ready(function(){
 	});	
 	$("#dot").click(function(){
 		$("#shizi span:last").text($("#shizi span:last").text()+".")
-	});
-	
-	$("#zuokuohao").click(function(){
-		$("#shizi span:last").text($("#shizi span:last").text()+"(")
-	});
-	
-	$("#youkuohao").click(function(){
-		$("#shizi span:last").text($("#shizi span:last").text()+")")
-	});
+	});	
 	
 	$("#jia").click(function(){
 		$("#shizi span:last").after("<span>+</span>"+"<span></span>")
@@ -58,8 +51,8 @@ $(document).ready(function(){
 	});	
 
 	$("#dengyu").click(function(){
-		$("#jieguo").text(eval($("#shizi span").text()));
-		ANS = eval($("#jieguo").text());
+		$("#jieguo").text(ce.eval($("#shizi span").text()));
+		ANS = ce.eval($("#jieguo").text());
 	});
 	
 	$("#allclear").click(function(){
