@@ -1,5 +1,5 @@
 *{
-  font-size:100%；
+  font-size:12px;
 }
 html, body {
     height: 100%;
@@ -28,14 +28,14 @@ html, body {
   user-select: none;
 }
 #shizi{
-  
+  font-size:6em;
   margin-bottom: 0;
   margin-top: 2%;
   line-height: 1em;
   
 }
 #jieguo{
-  
+  font-size:6em;
   margin-bottom: 0;
   margin-top: 2%;
   
@@ -47,7 +47,7 @@ html, body {
   
 }
 .button{
-  
+  font-size:6em;
   text-align: center; 
   width: 25%;
   margin: 0.5%;  
