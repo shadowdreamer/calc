@@ -1,3 +1,4 @@
+var ANS;
 $(document).ready(function(){
 	$("#num1").click(function(){
 		$("#shizi span:last").text($("#shizi span:last").text()+1)   /*数字0~9*/
@@ -49,12 +50,17 @@ $(document).ready(function(){
 	});	
 
 	$("#dengyu").click(function(){
-		$("#jieguo").text(eval($("#shizi span").text()))
+		$("#jieguo").text(eval($("#shizi span").text()));
+		ANS = eval($("#jieguo").text());
 	});
 	
 	$("#allclear").click(function(){
 		$("#jieguo").text("");
 		$("#shizi").html("<span></span>");
+	});
+	
+	$("#ans").click(function(){		
+		$("#shizi span:last").text($("#shizi span:last").text()+"ANS");
 	});
 	
 
