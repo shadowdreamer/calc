@@ -32,7 +32,15 @@ $(document).ready(function(){
 	});	
 	$("#dot").click(function(){
 		$("#shizi span:last").text($("#shizi span:last").text()+".")
-	});	
+	});
+	
+	$("#zuokuohao").click(function(){
+		$("#shizi span:last").text($("#shizi span:last").text()+"(")
+	});
+	
+	$("#youkuohao").click(function(){
+		$("#shizi span:last").text($("#shizi span:last").text()+")")
+	});
 	
 	$("#jia").click(function(){
 		$("#shizi span:last").after("<span>+</span>"+"<span></span>")
