@@ -14,5 +14,7 @@
 			case "youkuohao" : writethings(")");break;
 			case "AC" : $("#shizi").html("<span></span>"); $("#jieguo").html(""); break;
 			case "dengyu" : $("#jieguo").text(ce.eval($("#shizi span").text())); break;
+			case "back" : let temp= $("#shizi span:last").text();
+								$("#shizi span:last").text(temp.substring(0,temp.Length - 1));break;
 		}
 	}	
