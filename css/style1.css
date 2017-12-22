@@ -7,7 +7,6 @@ html, body {
     
 }
 #input{
-  font-size: 600%;
   background-color: pink;
   display:block;
   word-break: break-all;
@@ -26,12 +25,14 @@ html, body {
   user-select: none;
 }
 #shizi{
+  font-size: 600%;
   margin-bottom: 0;
   margin-top: 2%;
   line-height: 1em;
   
 }
 #jieguo{
+  font-size: 600%;
   margin-bottom: 0;
   margin-top: 2%;
   
