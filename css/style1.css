@@ -49,8 +49,7 @@ html, body {
   margin-top: 2%;
   
 }
-.button{
-  -webkit-tap-highlight-color:argb(130,130,130,0.5);
+.calbutton{
   font-size: 200%;
   text-align: center; 
   width: 25%;

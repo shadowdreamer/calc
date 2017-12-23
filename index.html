@@ -7,39 +7,40 @@
 <link rel="stylesheet" type= "text/css" href="css/style1.css"/>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/CalcEval.js"></script>
-<script src="js/main.js"></script>                  
 </head>              
   	<body>
                 <div id="input">
                         <p id= "shizi"><span></span></p>
-                        <p id= "jieguo"></p></p>         </div>
+                        <p id= "jieguo"></p></p>         
+				</div>
                 <div id="pad">
                         <p class= "padline">
-                                <button  class = "button" onclick = "inputwrite('AC')">AC</button>
-                                <button  class = "button" onclick = "inputwrite('back')">←</button>
-                                <button  class = "button" onclick = "inputwrite('chen')">×</button>
-                                <button  class = "button" onclick = "inputwrite('chu')">÷</button></p>
+                                <button  class = "calbutton" data-op = "AC">AC</button>
+                                <button  class = "calbutton" data-op = "back">←</button>
+                                <button  class = "calbutton" data-op = "chen">×</button>
+                                <button  class = "calbutton" data-op = "chu">÷</button></p>
                         <p class= "padline">
-                                <button  class = "button" onclick = "inputwrite(7)">7</button>
-                                <button  class = "button" onclick = "inputwrite(8)">8</button>
-                                <button  class = "button" onclick = "inputwrite(9)">9</button>
-                                <button  class = "button" onclick = "inputwrite('jia')">+</button></p>
+                                <button  class = "calbutton" data-op = "7">7</button>
+                                <button  class = "calbutton" data-op = "8">8</button>
+                                <button  class = "calbutton" data-op = "9">9</button>
+                                <button  class = "calbutton" data-op = "jia">+</button></p>
                         <p class= "padline">
-                                <button  class = "button" onclick = "inputwrite(4)">4</button>
-                                <button  class = "button" onclick = "inputwrite(5)">5</button>
-                                <button  class = "button" onclick = "inputwrite(6)">6</button>
-                                <button  class = "button" onclick = "inputwrite('jian')">-</button></p>
+                                <button  class = "calbutton" data-op = "4">4</button>
+                                <button  class = "calbutton" data-op = "5">5</button>
+                                <button  class = "calbutton" data-op = "6">6</button>
+                                <button  class = "calbutton" data-op = "jian">-</button></p>
                         <p class = "padline">
-                                <button  class = "button" onclick = "inputwrite(1)">1</button>
-                                <button  class = "button" onclick = "inputwrite(2)">2</button>
-                                <button  class = "button" onclick = "inputwrite(3)">3</button>
-                                <button  class = "button" onclick = "inputwrite('zhenfu')">+/-</button></p>
+                                <button  class = "calbutton" data-op = "1">1</button>
+                                <button  class = "calbutton" data-op = "2">2</button>
+                                <button  class = "calbutton" data-op = "3">3</button>
+                                <button  class = "calbutton" data-op = "zhenfu">+/-</button></p>
                         <p class = "padline">
-                                <button  class = "button" onclick = "inputwrite('zuokuohao')">(</button> 
-								<button  class = "button" onclick = "inputwrite('youkuohao')">)</button>
-                                <button  class = "button" onclick = "inputwrite(0)">0</button>
-                                <button  class = "button" onclick = "inputwrite('dot')">.</button>
-                                <button  class = "button" onclick = "inputwrite('dengyu')">=</button></p>
+                                <button  class = "calbutton" data-op = "zuokuohao">(</button> 
+								<button  class = "calbutton" data-op = "youkuohao">)</button>
+                                <button  class = "calbutton" data-op = "0">0</button>
+                                <button  class = "calbutton" data-op = "dot">.</button>
+                                <button  class = "calbutton" data-op = "dengyu">=</button></p>
                 </div>
+	<script src="js/main.js"></script>   
 	</body>
 </html>

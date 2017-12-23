@@ -16,4 +16,9 @@
 			case "dengyu" : $("#jieguo").text(ce.eval($("#shizi span").text())); break;
 			case "back" : let temp= $("#shizi span:last").text();	$("#shizi span:last").text(temp.substring(0,temp.length - 1));break;
 		}
-	}	
+	};
+	
+	$("#pad").on("click","button",function(){
+		inputwrite($(this).data("op") );
+	});
+	
