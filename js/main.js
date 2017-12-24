@@ -27,8 +27,8 @@
 			case "back" : crrtEdit.text(temp.substring(0,temp.length - 1));break;
 		}
 		changed = $("#shizi").text().replace(/\*/g,"×");
-		changed = change.replace(/\//g,"÷");
-		changed = change.replace(/\(pi\)/g,"π");		
+		changed = changed.replace(/\//g,"÷");
+		changed = changed.replace(/\(pi\)/g,"π");		
 		$("#showshizi").text(changed);
 		
 	};		
