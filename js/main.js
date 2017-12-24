@@ -1,7 +1,8 @@
-	const ce = new CalcEval();	
+	var ANS;
+	var changed;
 	function inputwrite(n){
 		let crrtEdit = $("#shizi span:last");
-		let temp= crrtEdit.text();
+		let temp= crrtEdit.text();		
 		function writethings(x){
 			crrtEdit.text(temp+x);
 		}
@@ -12,15 +13,24 @@
 			case "chu" : writethings("/");break;
 			case "jia" : writethings("+");break;
 			case "jian" : writethings("-");break;
+			case "^" : writethings("^");break;
 			case "zuokuohao" : writethings("(");break;
 			case "youkuohao" : writethings(")");break;
 			case "CE" : $("#shizi").html("<span></span>"); break;
 			case "AC" : $("#shizi").html("<span></span>"); $("#jieguo").html(""); break;
-			case "ANS" : writethings($("#jieguo").text());break;
-			case "dengyu" : $("#jieguo").text(ce.eval($("#shizi").text())); break;
+			case "ANS" : writethings(ANS);break;
+			case "dengyu" :
+				ANS = math.format(math.eval($("#shizi").text()),{precision:14});
+				$("#jieguo").text(ANS);break;
 			case "back" : crrtEdit.text(temp.substring(0,temp.length - 1));break;
 		}
+		changed = $("#shizi").text().replace(/\*/g,"×");
+		changed = $("#shizi").text().replace(/\//g,"÷");
+		$("#showshizi").text(changed);
+		
 	};		
+	
+	
 	$("#pad").on("click","button",function(){
 		inputwrite($(this).data("op") );
 	});
