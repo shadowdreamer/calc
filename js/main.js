@@ -1,7 +1,9 @@
-	var ce = new CalcEval();
+	const ce = new CalcEval();	
 	function inputwrite(n){
+		let crrtEdit = $("#shizi span:last");
+		let temp= crrtEdit.text();
 		function writethings(x){
-			$("#shizi span:last").text($("#shizi span:last").text()+x);
+			crrtEdit.text(temp+x);
 		}
 		switch (n) {
 			case 0 : case  1 : case  2 : case  3 : case  4 : case  5 : case 6 : case  7 : case 8 : case 9 : writethings(n);break;
@@ -12,13 +14,15 @@
 			case "jian" : writethings("-");break;
 			case "zuokuohao" : writethings("(");break;
 			case "youkuohao" : writethings(")");break;
+			case "CE" : $("#shizi").html("<span></span>"); break;
 			case "AC" : $("#shizi").html("<span></span>"); $("#jieguo").html(""); break;
-			case "dengyu" : $("#jieguo").text(ce.eval($("#shizi span").text())); break;
-			case "back" : let temp= $("#shizi span:last").text();	$("#shizi span:last").text(temp.substring(0,temp.length - 1));break;
+			case "ANS" : writethings($("#jieguo").text());break;
+			case "dengyu" : $("#jieguo").text(ce.eval($("#shizi").text())); break;
+			case "back" : crrtEdit.text(temp.substring(0,temp.length - 1));break;
 		}
-	};
-	
+	};		
 	$("#pad").on("click","button",function(){
 		inputwrite($(this).data("op") );
 	});
 	
+
