@@ -26,9 +26,7 @@
 				$("#jieguo").text(ANS);break;
 			case "back" : crrtEdit.text(temp.substring(0,temp.length - 1));break;
 		}
-		changed = $("#shizi").text().replace(/\*/g,"×");/*
-		changed = changed.replace(/\//g,"÷");
-		changed = changed.replace(/\(pi\)/g,"π");*/		
+		changed = $("#shizi").text().replace(/\*/g,"×").replace(/\//g,"÷").replace(/\(pi\)/g,"π");
 		$("#showshizi").text(changed);
 		
 	};		
