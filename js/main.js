@@ -1,5 +1,6 @@
 	var ANS;
 	var changed;
+	var fix = 14;
 	function inputwrite(n){
 		let crrtEdit = $("#shizi span:last");
 		let temp= crrtEdit.text();		
@@ -22,13 +23,17 @@
 			case "AC" : $("#shizi").html("<span></span>"); $("#jieguo").html(""); break;
 			case "ANS" : writethings(ANS);break;
 			case "dengyu" :
-				ANS = math.format(math.eval($("#shizi").text()),{precision:14});
+				ANS = math.format(math.eval($("#shizi").text()),{precision:fix});
 				$("#jieguo").text(ANS);break;
-			case "back" : crrtEdit.text(temp.substring(0,temp.length - 1));break;
+			case "back" : 
+			if (temp.substring(temp.length - 4,temp.length) == "(pi)"){
+				crrtEdit.text(temp.substring(0,temp.length - 4))
+			}else{
+			crrtEdit.text(temp.substring(0,temp.length - 1))
+			};break;
 		}
 		changed = $("#shizi").text().replace(/\*/g,"×").replace(/\//g,"÷").replace(/\(pi\)/g,"π");
-		$("#showshizi").text(changed);
-		
+		$("#showshizi").text(changed);		
 	};		
 	$("#pad").on("click","button",function(){
 		inputwrite($(this).data("op") );
