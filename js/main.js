@@ -14,6 +14,8 @@
 			case "jia" : writethings("+");break;
 			case "jian" : writethings("-");break;
 			case "^" : writethings("^");break;
+			case "pi" : writethings("(pi)");break;
+			case "jiechen" : writethings("!");break;
 			case "zuokuohao" : writethings("(");break;
 			case "youkuohao" : writethings(")");break;
 			case "CE" : $("#shizi").html("<span></span>"); break;
@@ -26,11 +28,10 @@
 		}
 		changed = $("#shizi").text().replace(/\*/g,"×");
 		changed = $("#shizi").text().replace(/\//g,"÷");
+		changed = $("#shizi").text().replace(/\(pi\)/g,"π");		
 		$("#showshizi").text(changed);
 		
 	};		
-	
-	
 	$("#pad").on("click","button",function(){
 		inputwrite($(this).data("op") );
 	});
